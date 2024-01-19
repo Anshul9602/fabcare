@@ -1,0 +1,265 @@
+{{ header }}
+<style>
+	.real_pro-img {
+		padding: 3px;
+	}
+
+	.nice-select {
+		float: right;
+		background: transparent;
+		border: none;
+		max-width: 140px;
+		background: #fff;
+	}
+
+	.pagination li {
+		padding: 5px 10px 2px;
+		font-size: 12px;
+	}
+
+	.pagination li a {
+		color: #666;
+	}
+
+	.pagination li.active {
+		background: #003B30;
+		color: #fff;
+	}
+
+	.product-card {
+		margin: auto;
+		box-shadow: 0 4px 8px 0 rgba(131, 129, 129, 0.6);
+		border-radius: 0;
+		background: #fff;
+		height: auto;
+		text-align: left;
+	}
+	.product-card-body {
+		padding-left: 5px;
+	}
+	.product_name {
+		margin-top: 7.5px;
+
+		font-size: 16px;
+	}
+	.sub-title {
+		color: #999;
+		text-transform: uppercase;
+		font-size: 10px;
+		margin-top: -14px;
+	}
+
+
+	#mobile_filter {
+		display: none;
+	}
+
+
+	.p-card-holder {
+		padding: 5px;
+	}
+
+	.wishlist_link {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		border-radius: 50%;
+		background: rgb(255, 255, 255, 0.5);
+		cursor: pointer;
+		width: 37px;
+		height: 37px;
+		text-align: center;
+	}
+	.wishlist_link i {
+		line-height: 38px;
+	}
+	@media screen and(max-width:789px) {
+		.product_name {
+			font-size: 12px !important;
+			margin-top: 5px;
+		}
+		.price_new {
+			font-size: 12px !important;
+			margin-top: 5px;
+		}
+
+		#mobile_filter {
+			display: inline;
+			float: right;
+			cursor: pointer;
+			color: #333;
+		}
+.mob_st{
+	text-align: start !important;
+}
+		.nice-select {
+			margin-right: 30px;
+			margin-top: -28px;
+		}
+
+		.p-card {
+			padding: 2px !important;
+		}
+
+		.product-card {
+			box-shadow: 0 2.5px 5px 0 rgba(131, 129, 129, 0.4);
+			border-radius: 0;
+			height: auto !important;
+		}
+
+		.mt-4 {
+			margin-top: 5px;
+		}
+	}
+	.alert-dismissible{
+		display: none;
+	}
+</style>
+<script>
+	$(document).ready(function () {
+$("#mobile_filter").click(function (e) {
+e.preventDefault();
+$(".backdrop-filter").fadeIn();
+$(".filter-panel").animate({left: '0px'})
+})
+$(".backdrop-filter").click(function () {
+$(".backdrop-filter").fadeOut();
+$(".filter-panel").animate({left: '-260px'})
+})
+
+})
+</script>
+<section style="background:#fcfcfc">
+	<div id="product-category" class="container">
+		<div class="row">
+			<div id="content" style="min-height:600px" class="col-12">
+				{% if products %}
+					<div class="row">
+						<div style="display:none" class="col-md-2 col-sm-6 hidden-xs">
+							<div class="btn-group btn-group-sm">
+								<button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="{{ button_list }}">
+									<i class="fa fa-th-list"></i>
+								</button>
+								<button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="{{ button_grid }}">
+									<i class="fa fa-th"></i>
+								</button>
+							</div>
+						</div>
+						<div style="display:none" class="col-md-3 col-xs-6">
+							<div class="form-group input-group input-group-sm">
+								<label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+								<select id="input-limit" class="form-control" onchange="location = this.value;">
+									{% for limits in limits %}
+										{% if limits.value == limit %}
+											<option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+										{% else %}
+											<option value="{{ limits.href }}">{{ limits.text }}</option>
+										{% endif %}
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div style="margin-top:20px;float:left;" class="row">
+
+
+
+						<div class="col-sm-12" style="float:right;">
+							<div class="row">
+								<div style='padding-top:12px' class="col-sm-6 hide-phone">
+									{{ results }}
+								</div>
+								<div class="col-sm-6  text-right">
+									<a id="mobile_filter" href="#">
+										<li class="fa fa-filter"></li>
+									</a>
+									<select id="input-sort" style='float:right' class="form-control" onchange="location = this.value;">
+										{% for sorts in sorts %}
+											{% if sorts.value == '%s-%s'|format(sort, order) %}
+												<option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+											{% else %}
+												<option value="{{ sorts.href }}">{{ sorts.text }}</option>
+											{% endif %}
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+							<hr class="mt-10"/>
+							<div style="margin-top:-20px" class="row ">
+								{% for product in products %}
+									<div class="col-sm-3 col-6 mt-4 p-card-holder">
+										<div class="product-card">
+											<div class="image real_pro-img">
+												<a  href="{{ product.href }}">
+													<img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive"/>
+												</a>
+											</div>
+											<a class="wishlist_link" onclick="wishlist.add('{{ product.product_id }}');">
+												{% if not product.wish %}
+													<i class="pe-7s-like" btnid="{{ product.product_id }}" btnname="{{ product.name }}" btnimg="{{ product.thumb }}" btnhref="{{ product.href }}" btnprice="{{ product.price }}" btnsprice="{{ product.special }} " btnpercent="{{ product.percent }}" style="color: #4a4975; font-size:24px;"></i>
+												{% else %}
+													<i class="fa fa-heart" style="color: #4a4975; font-size:24px;" aria-hidden="true"></i>
+
+												{% endif %}
+											</a>
+											<div class="product-card-body" style="padding-bottom:15px;">
+												<div class="row justify-content-space-around">
+													<div class="col-md-8"style="padding-right: 0px;">
+														<a  href="{{ product.href }}">
+															<h4 class="product_name">{{ product.name }}</h4>
+															
+														</a>
+													</div>
+													<div class="col-md-3  mob_ts" style="text-align: end;padding-left: 0px;">
+														{% if product.price %}
+															<p class="price mb-0">
+																{% if not product.special %}
+																	<span class="price-new">{{ product.price }}</span>
+																{% else %}
+																	<span class="price-new">{{ product.special }}</span>
+																	<span class="price-old" style="text-decoration: line-through;">{{ product.price }}</span><br>
+																{% endif %}
+																{% if product.tax %}
+																	<span class="price-tax">{{ text_tax }}
+																		{{ product.tax }}</span>
+																{% endif %}
+															</p>
+														{% endif %}
+														{% if product.percent %}
+														<span style="text-decoration:none; color: #6c8bab;font-weight: 600;font-size:14px;" class="off_p">{{ product.percent }}% OFF</span>
+												         {% endif %}
+														
+
+
+													</div>
+												</div>
+
+
+											</div>
+
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-sm-6 text-left">{{ pagination }}</div>
+							</div>
+						</div>
+					</div>
+					<br/><br/>
+				{% endif %}
+				{% if not categories and not products %}
+					<p class="text-center d-flex justify-content-center" style="min-height:300px;align-items: center;">{{ text_empty }}</p>
+					<div class="buttons">
+						<div class="pull-right">
+							<a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a>
+						</div>
+					</div>
+				{% endif %}
+				{{ content_bottom }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ footer }}

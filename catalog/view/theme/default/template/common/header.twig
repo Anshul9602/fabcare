@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- [if IE]><![endif] -->
+<!-- [if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif] -->
+<!-- [if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif] -->
+<!-- [if (gt IE 9)|!(IE)]><! -->
+	<html
+	dir="{{ direction }}" lang="{{ lang }}"> <!-- <![endif] -->
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<title>
+			{{ title }}
+		</title>
+		<base href="{{ base }}"/>
+		{% if description %}
+			<meta name="description" content="{{ description }}"/>
+		{% endif %}
+		{% if keywords %}
+			<meta name="keywords" content="{{ keywords }}"/>
+		{% endif %}
+		<!-- Bootstrap CSS -->
+		<link
+		rel="stylesheet" href="assets/css/vendor/bootstrap.min.css"/>
+		<!-- Pe-icon-7-stroke CSS -->
+		<link
+		rel="stylesheet" href="assets/css/vendor/pe-icon-7-stroke.css"/>
+		<!-- Font-awesome CSS -->
+		<link
+		rel="stylesheet" href="assets/css/vendor/font-awesome.min.css"/>
+		<!-- Slick slider css -->
+		<link
+		rel="stylesheet" href="assets/css/plugins/slick.min.css"/>
+		<!-- animate css -->
+		<link
+		rel="stylesheet" href="assets/css/plugins/animate.css"/>
+		<!-- Nice Select css -->
+		<link
+		rel="stylesheet" href="assets/css/plugins/nice-select.css"/>
+		<!-- jquery UI css -->
+		<link
+		rel="stylesheet" href="assets/css/plugins/jqueryui.min.css"/>
+		<!-- main style css -->
+		<link
+		rel="stylesheet" href="assets/css/style.css?v1.123"/>
+
+		<!-- jQuery JS -->
+		<script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+		<link
+		rel="stylesheet" href="assets/css/edit.css?v1.1"/>
+		<!-- Swiper Slider CSS-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+		<link
+		rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+		{% for style in styles %}
+			<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>
+		{% endfor %}
+		{% for script in scripts %}
+			<script src="{{ script }}" type="text/javascript"></script>
+		{% endfor %}
+		<script src="catalog/view/javascript/common.js?v1.12" type="text/javascript"></script>
+		{% for link in links %}
+			<link href="{{ link.href }}" rel="{{ link.rel }}"/>
+		{% endfor %}
+		{% for analytic in analytics %}
+			{{ analytic }}
+		{% endfor %}
+		<link rel="stylesheet" href="assets/css/edit.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+
+		<style>
+
+			@media only screen and(max-width: 1050px) {
+
+				.margin_mob {
+					margin-top: 1.5rem !important;
+				}
+
+
+				.slick-dots {
+					bottom: -30px !important;
+				}
+			}
+
+
+			.off-canvas-wrapper .off-canvas-inner {
+				height: 90% !important;
+			}
+
+			.search-btn {
+				padding: 0 10px;
+			}
+
+			.main-menu ul li a {
+
+				padding: 9px 15px;
+			}
+
+			.top-strip span {
+				font-weight: 700 !important;
+			}
+
+			.product-card-body {
+				padding: 10px !important;
+			}
+
+			.product-card-body .product_name {
+				height: 30px !important;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				line-height: 1.5 !important;
+			}
+
+			.blink {
+				animation: blinker 0.7s linear infinite;
+
+				font-weight: bold;
+				font-family: sans-serif;
+			}
+
+			@keyframes blinker {
+				50% {
+					color: #4a4975;
+					font-weight: bold;
+
+				}
+			}
+			.ptb-10 {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			.container-nav {
+				max-width: 85%;
+				margin: auto;
+			}
+			.is-sticky .top-strip {
+				display: none !important;
+			}
+		</style>
+		<!-- Start Header Area -->
+		<header
+			id="header" class="header-area sticky">
+			<!-- main header start -->
+			<div
+				class="main-header d-none d-lg-block">
+				<!-- header middle area start -->
+				<div class="header-main-area ">
+					<div class="top-strip d-none">
+						<div class="container-nav">
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="offer_text" style="font-size: 11px;">GET 15%
+																			DISCOUNT ON YOUR FIRST PURCHASE. USE CODE:
+										<span style="color:#4a4975;font-weight: 800;font-size: 14px;">FIRST15</span>
+									</p>
+								</div>
+								<div class="col-sm-6 text-right">
+									<li style="font-size:11.5px" class="pe-7s-call"></li>
+									<a class="header_contact" href="tel:+91 9828232081 ">+91-98282 32081</a>
+									&nbsp;&nbsp;
+									<li class="fa fa-envelope-o"></li>
+									<a href="mailto:info@daevish.com">info@daevish.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="container-nav main-menu-area">
+						<div class="row align-items-center ptb-10">
+							<div class="col-md-2">
+								<div id="logo" class="main-logo" style="width:190px;">
+									<a href="{{ home }}">
+										<img src="image/pe/logo.png" title="{{ name }}" alt="{{ name }}" class="img-responsive"/>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-10">
+								<div class="search-wrap d-none">
+									{{ search }}
+								</div>
+								<div class="main-menu">
+									{{ menu }}
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- header middle area end -->
+				</div>
+			</div>
+			<!-- main header start -->
+
+			<!-- mobile header start -->
+			<!-- mobile header start -->
+				<div
+				class="mobile-header d-lg-none d-md-block sticky col-12"> <!-- mobile header top start -->
+				<div class="container-fluid p-0" style="font-size:25px">
+					<div class="row align-items-center m-0">
+						<div class="col-12 ">
+
+
+							<div class="mobile-main-header">
+								<div class="mobile-logo">
+									<a href="{{ home }}">
+										<img src="image/pe/logo.png" alt="Brand Logo"/>
+									</a>
+								</div>
+								<div class="mobile-menu-toggler">
+
+
+									<button class="mobile-menu-btn">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- mobile header top start -->
+			</div>
+			<!-- mobile header end -->
+			<!-- mobile header end -->
+
+			<!-- offcanvas mobile menu start -->
+			<!-- off-canvas menu start -->
+				<aside id="header" class="off-canvas-wrapper"> <div class="off-canvas-overlay"></div>
+				<div class="off-canvas-inner-content">
+					<div class="btn-close-off-canvas">
+						<i class="pe-7s-close"></i>
+					</div>
+
+					<div
+						class="off-canvas-inner">
+						<!-- search box start -->
+
+						<div class="col-lg-12 p-0 m-0">
+
+							Menu
+
+							<hr>
+						</div>
+						<!-- search box end -->
+
+						<!-- mobile menu start -->
+						<div
+							class="mobile-navigation">
+							<!-- mobile menu navigation start -->
+							<nav>
+								{% if menu_categories %}
+									<ul class="mobile-menu">
+
+										{% for category in menu_categories %}
+											{% if category.children %}
+												<li class="menu-item-has-children">
+													{% set myVariable = category.href %}
+													<a href="{{ category.href }}">{{ category.name }}</a>
+													<ul class="dropdown">
+														{% for children in category.children|batch(category.children|length /
+										category.column|round(1, 'ceil')) %}
+															{% for child in children %}
+																<li>
+																	<a href="{{ child.href }}">{{ child.name }}</a>
+																</li>
+															{% endfor %}
+														{% endfor %}
+													</ul>
+												</li>
+											{% else %}
+
+												<li class="d-flex" style="align-items: center;">
+													{% if category.name == "New Arrival" %}
+														<a href=" {{ category.href }} " class="blink" style="color:#f48282;font-weight: bold;">
+															{{ category.name }}</a>
+													{% else %}
+
+														<a href=" {{ category.href }} ">
+															{{ category.name }}</a>
+													{% endif %}
+												</li>
+
+											{% endif %}
+										{% endfor %}
+
+									</ul>
+								{% endif %}
+							</nav>
+							<!-- mobile menu navigation end -->
+						</div>
+						<!-- mobile menu end -->
+
+						<div class="mobile-settings">
+							<ul class="nav">
+
+								<div class="dropdown mobile-top-dropdown">
+									<a href="#" class="user-hover" id="myaccount" data-toggle="dropdown" aria-haspopup="true" style="color:black;" aria-expanded="false">
+										My Account
+										<i class="fa fa-angle-down"></i>
+									</a>
+
+									<div class="dropdown-list" aria-labelledby="myaccount">
+										{% if logged %}
+											<a class="dropdown-item" href="{{ account }}">
+												{{ text_account }}</a>
+											<a class="dropdown-item" href="{{ order }}">
+												{{ text_order }}</a>
+											<a class="dropdown-item" href="{{ logout }}">
+												{{ text_logout }}</a>
+										{% else %}
+											<a class="dropdown-item" href="{{ register }}">
+												{{ text_register }}</a>
+											<a class="dropdown-item" href="{{ login }}">
+												{{ text_login }}</a>
+										{% endif %}
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- offcanvas widget area start -->
+					<div class="offcanvas-widget-area">
+						<div class="off-canvas-contact-widget">
+							<ul>
+								<li>
+									<i class="fa fa-mobile"></i>
+									<a href="tel:+91 									<a href=" tel:+91 9828232081">+91-98738 38000</a>">+91-98738 38000
+								</li>
+							</a>
+						</li>
+						<li>
+							<i class="fa fa-envelope-o"></i>
+							<a href="mailto: info@daevish.com">info@fabcare.com</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- offcanvas widget area end -->
+			</div>
+		</div>
+	</body>
+</html></aside></header>
+

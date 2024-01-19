@@ -1,0 +1,76 @@
+<style>
+	.dlogo {
+		display: flex !important;
+	}
+
+	.jcenter1 {
+		justify-content: center !important;
+	}
+
+	.blink {
+		animation: blinker 0.7s linear infinite;
+
+		font-weight: bold;
+		font-family: sans-serif;
+	}
+
+	@keyframes blinker {
+		50% {
+			color: #4a4975;
+			font-weight: bold;
+
+		}
+	}
+</style>
+
+{% if categories %}
+<div class="">
+	<nav class="desktop-menu">
+		<div class="row p-3">
+			
+			<ul class="nav col-md-12 jcenter" style="align-items: center;    justify-content: space-between;">
+				
+				{% for category in categories %}
+				{% if category.children %}
+				<li class="dropdown" style="padding:0 2%;">
+					<a href="{{ category.href }}">{{ category.name }}</a>
+					<ul class="dropdown " >
+						{% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil'))
+						%}
+						{% for child in children %}
+						<li style="padding:10px 0 ;">
+							<a href="{{ child.href }} "
+								style=" color:#4a4975;font-weight: 800;    text-transform: uppercase; ">{{ child.name }}</a>
+							<ul>
+								{% for child1 in child.childrens %}
+								<li>
+									<a href="{{ child1.href }}" style="    font-size: 13px;">{{ child1.name }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+							
+						</li>
+						{% endfor %}
+						{% endfor %}
+					</ul>
+				</li>
+				{% else %}
+				<li style="padding:0 2%;">
+					{% if category.name == "New Arrival" %}
+					<a href=" {{ category.href }} " class="blink" style="color:#f48282;font-weight: bold;">
+						{{ category.name }}</a>
+					{% else %}
+		
+					<a href=" {{ category.href }} ">
+						{{ category.name }}</a>
+					{% endif %}
+				</li>
+				{% endif %}
+				{% endfor %}
+				</li>
+			</ul>
+		</div>
+		
+	</nav>
+</div>
+{% endif %}</li>

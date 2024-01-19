@@ -1,0 +1,174 @@
+{{ header }}
+<style>
+	.list-unstyled li {
+		color: #333;
+		font-size: 14px;
+		letter-spacing: 1px;
+		margin-top: 5px
+	}
+
+	.list-unstyled li a {
+		color: #ccc
+	}
+
+	.list-unstyled li a:hover {
+		color: #333
+	}
+.remove_btn:hover {
+	 opacity: 1;
+}
+.remove_btn{
+	    opacity: 0.5;
+	position: absolute;
+      top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.5);
+    cursor: pointer;
+    
+    text-align: center;
+}
+
+
+</style>
+
+<!-- breadcrumb area start -->
+<div style="background:#f1f1f1; border-bottom:thin solid #fff" class="breadcrumb-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumb-wrap">
+					<nav aria-label="breadcrumb">
+						<ul class="breadcrumb">
+							{% for breadcrumb in breadcrumbs %}
+								<li>
+									<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+								</li>
+							{% endfor %}
+
+
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- breadcrumb area end -->
+
+<div style="min-height:50vh;" class="container">
+
+
+	<div class="row mbn-30">
+
+		<div id="pro_card" class="row mt-4"></div>
+	</div>
+	<br><br><br><br>
+
+</div>
+
+<script>
+	const product = JSON.parse(localStorage.getItem("wishlist1"));
+
+
+
+let result = "";
+
+for (let i = 0; i < product.length; i++) {
+var card = `	<div
+				class="col-md-3 col-sm-6 mt-3">
+				<!-- product grid start -->
+				<div class=" p-card-holder">
+											<div class="product-card">
+												<div class="image real_pro-img">
+													<a target="_blank" href="${
+product[i].producturl
+}">
+														<img src="${
+product[i].productimg
+}" class="img-responsive"/>
+													</a>
+												</div>
+												<button type="button" btnid="${product[i].productid}" class="btn btn-primary remove_btn">remove</button>
+					
+												<div class="product-card-body">
+													<div class="row">
+														<div class="col-7 product-name">
+															<a target="_blank" href="${
+product[i].producturl
+}">
+																<h4 class="product_name" >${
+product[i].productname
+}</h4>
+																
+															</a>
+															
+														</div>
+														<div class="col-5">
+															
+																<p class="price mb-0">
+																	
+																		<span class="price-new" >${
+product[i].productsprice
+}</span><br>
+																		<span class="price-old" style="text-decoration: line-through;">${
+product[i].productprice
+}</span><br>
+			<span
+													style="text-decoration:none; color: #6c8bab;font-weight: 600;font-size:14px;"
+													class="off_p">${product[i].productpercent}% OFF</span>														
+																	
+																</p>
+															
+															
+
+														</div>
+													</div>
+
+
+												</div>
+
+											</div>
+										</div>
+				
+			</div>
+	`
+result = result + card;
+}
+
+document.getElementById('pro_card').innerHTML = result;
+
+
+// remove products from wish 
+const allProductBtns = document.querySelectorAll(".remove_btn");
+
+
+
+allProductBtns.forEach((btn, index) => {
+btn.addEventListener("click", (e) => { 
+	
+
+	// alert(`You clicked on Product ${index + 1}`);
+const productId = e.target.getAttribute("btnid");
+//console.log(productId);
+
+ let idToRemove = productId;
+ //console.log("idToRemove",idToRemove);
+let index = product.findIndex(obj => obj.productid === idToRemove);
+if (index !== -1) {
+ product.splice(index, 1);
+
+}
+//console.log("productarray",product);
+ localStorage.setItem('wishlist1', JSON.stringify(product));
+
+window.location.reload();
+
+
+
+
+})} );
+
+</script>
+{{ footer }}

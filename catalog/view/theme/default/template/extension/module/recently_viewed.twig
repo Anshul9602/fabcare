@@ -1,0 +1,111 @@
+<!-- Recent viewed -->
+<section class="cares recent separation mt-5">
+	<div class="container new-font">
+		<div class="row justify-content-around flex-xs-row-reverse">
+			<div class="col-12 mb-4">
+				<h2 style="text-align: center; margin-bottom: 20px">Recently Viewed<span class="hb" style="display: flex;justify-content: center;"></span>
+				</h2>
+				<br/>
+				<div class="swiper topSwiper1">
+					<div class="swiper-wrapper">
+						{% if products %}
+							{% for product in products %}
+								<div class="swiper-slide" >
+									<div class=" p-card-holder">
+											<div class="product-card">
+												<div class="image real_pro-img">
+													<a target="_blank" href="{{ product.href }}">
+														<img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive"/>
+													</a>
+												</div>
+
+												<a class="wishlist_link " onclick="wishlist.add('{{ product.product_id }}');">
+													{% if not product.wish %}
+
+														<i class="pe-7s-like" btnid="{{ product.product_id }}" btnname="{{ product.name }}" btnimg="{{ product.thumb }}" btnhref="{{ product.href }}" btnprice="{{ product.price }}" btnsprice="{{ product.special }}" style="color: #f06639; font-size:24px;"></i>
+
+
+													{% else %}
+
+														<i class="fa fa-heart" style="color: #f06639; font-size:24px;" aria-hidden="true"></i>
+
+													{% endif %}
+												</a>
+
+												<div class="product-card-body">
+													<div class="row">
+														<div class="col-7">
+															<a target="_blank" href="{{ product.href }}">
+																<h4 class="product_name">{{ product.name }}</h4>
+																<span class='sub-title'>By Woodpeel</span>
+															</a>
+														</div>
+														<div class="col-5">
+															{% if product.price %}
+																<p class="price mb-0">
+																	{% if not product.special %}
+																		<span class="price-new">{{ product.price }}</span>
+																	{% else %}
+																		<span class="price-new">{{ product.special }}</span>
+																		<span class="price-old" style="text-decoration: line-through;">{{ product.price }}</span><br>
+																	{% endif %}
+																	{% if product.tax %}
+																		<span class="price-tax">{{ text_tax }}
+																			{{ product.tax }}</span>
+																	{% endif %}
+																</p>
+															{% endif %}
+															<span style="text-decoration:none; color: #6c8bab;font-weight: 600;font-size:14px;" class="off_p">{{ product.percent }}% OFF</span>
+
+
+														</div>
+													</div>
+
+
+												</div>
+
+											</div>
+										</div>
+								</div>
+							{% endfor %}
+						{% endif %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	var swiper = new Swiper(".topSwiper1", {
+pagination: {
+el: ".top-swiper-pagination",
+clickable: true
+},
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev"
+},
+autoplay: false,
+// Default parameters
+slidesPerView: 4,
+spaceBetween: 10,
+// Responsive breakpoints
+breakpoints: { // when window width is >= 320px
+320: {
+slidesPerView: 2,
+spaceBetween: 10
+},
+// when window width is >= 480px
+480: {
+slidesPerView: 2,
+spaceBetween: 10
+},
+// when window width is >= 640px
+740: {
+slidesPerView: 4,
+spaceBetween: 10
+}
+}
+});
+</script>

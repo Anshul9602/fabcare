@@ -1,0 +1,445 @@
+{{ header }}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding: 16px;
+		text-align: center;
+		background-color: #f1f1f1;
+	}
+	.card p {
+		font-size: 18px;
+	}
+	.accordion .accordion-item {
+		border-bottom: 1px solid lightgray;
+	}
+
+	.accordion button {
+		position: relative;
+		display: block;
+		text-align: left;
+		width: 100%;
+		padding: 10px 0 0 0;
+		color: #5d5443;
+		font-size: 1.15rem;
+		font-weight: 400;
+		border: none;
+		background: none;
+		outline: none;
+	}
+
+	.accordion button:hover,
+	.accordion button:focus {
+		cursor: pointer;
+		color: black;
+	}
+
+	.accordion button:hover::after,
+	.accordion button:focus::after {
+		cursor: pointer;
+		color: black;
+		border: 1px solid green;
+	}
+
+	.accordion button .accordion-title {
+		width:100%;
+		display:block;
+		padding: 0em 1.5em 1em 0;
+	}
+
+	.accordion button .icon {
+		display: inline-block;
+		position: absolute;
+		top: 18px;
+		right: 0;
+		width: 22px;
+		height: 22px;
+		border: 1px solid;
+		border-radius: 22px;
+	}
+
+	.accordion button .icon::before {
+		display: block;
+		position: absolute;
+		content: '';
+		top: 9px;
+		left: 5px;
+		width: 10px;
+		height: 2px;
+		background: currentColor;
+	}
+
+	.accordion button .icon::after {
+		display: block;
+		position: absolute;
+		content: '';
+		top: 5px;
+		left: 9px;
+		width: 2px;
+		height: 10px;
+		background: currentColor;
+	}
+
+	.accordion button[aria-expanded='true'] {
+		color: black;
+	}
+
+	.accordion button[aria-expanded='true'] .icon::after {
+		width: 0;
+	}
+
+	.accordion button[aria-expanded='true'] + .accordion-content {
+		opacity: 1;
+		max-height: 100%;
+		transition: all 200ms linear;
+		will-change: opacity, max-height;
+	}
+
+	.accordion .accordion-content {
+		opacity: 0;
+		max-height: 0;
+
+		transition: opacity 200ms linear, max-height 200ms linear;
+		will-change: opacity, max-height;
+	}
+
+	.accordion .accordion-content p {
+		text-align: start;
+		padding:0px 0px 20px 0;
+		font-size: 1rem;
+		font-weight: 300;
+		margin: 0.5em 0;
+		
+	}
+	@media only screen and (max-width: 680px) {
+.card{
+	padding:10px !important;
+}
+.accordion button .accordion-title {
+		font-size:16px;
+	}
+	}
+</style>
+<section class="shopy_by_room separation">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-8">
+				<div class="main_text">
+					Expert Fabric Care
+					<span style="color: #5d5443;">Services</span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="text2">
+					Tailored services for every fabric.
+				</div>
+				<div class="mob_center" style="margin-top: 30px;">
+					<a class="text_btn " href="index.php?route=information/contact">
+						<span class="elementor-button-content-wrapper">
+							<span class="elementor-button-text" style="    text-transform: uppercase;">Schedule free pick up</span>
+						</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+<section class="shopy_by_room separation">
+	<img src="image/pe/b1.png" style="width:100%;">
+</section>
+
+<!-- hero slider area start -->
+<section class="shopy_by_room separation">
+	<div class="container">
+
+		<div class="row" style="justify-content: space-between;">
+			<div class="col-md-10">
+				<div class="mt-4">
+					<a class="text_btn1 " href="index.php?route=information/contact">
+						<span class="elementor-button-content-wrapper">
+							<span class="elementor-button-text">Our Policy</span>
+						</span>
+					</a>
+				</div>
+				<div class="main_text1 mob_center" style="margin-top: 30px;">
+					Frequently Asked Questions</div>
+			</div>
+			<div class="col-md-12 pt-5">
+				<div class="card " style="padding:50px;">
+					<div class="container">
+
+						<div class="accordion">
+							<div class="accordion-item">
+								<button id="accordion-button-1" aria-expanded="false">
+									<span class="accordion-title">Q1. Why fabcare?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Fabcare is a leader in manufacturing and distribution of laundry and Drycleaning solutions in India and abroad. Estabished in the year 1995, we have a vast experience in industrial washing sector. We are the pioneers in industrial washing sector and have a huge client base all over the world.</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-2" aria-expanded="false">
+									<span class="accordion-title">Q2. What’s special about fabcare ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>We bring to you for the first time the concept of live washing in our outlets. Our unique live studio format of a modern laundry & dry-cleaning service allows you to witness and experience the most innovative technology that’s available in the fabric-care and accessory-care industry today.</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-3" aria-expanded="false">
+									<span class="accordion-title">Q3. What is hydrocarbon machine and why using this makes us different from others ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Hydrocarbon is a fully automatic  European style and international standard programmable Dry Cleaning Machine. Hydrocarbons are much less dangerous for the environment than Perchloroethylene and are a more eco-friendly choice than traditional dry-cleaning.</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-4" aria-expanded="false">
+									<span class="accordion-title">Q4. What is so special about our shoe and bag spa ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>We bring to you for the first time advanced Italian cleaning solutions for  bag and shoe spa. We have an inhouse specialised machine for cleaning: shoes, carpets, bags, car seats, helmets, sofas, etc.<br>
+										Thanks to the power of the steam and specific accessories, the operator can guarantee the complete removal of each stain.<br>
+										We also specialise in sanitation ,restoration and repair .
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-5" aria-expanded="false">
+									<span class="accordion-title">Q5. How good is our leather cleaning service ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Leather being a product of nature ,has a specialised cleaning process designed to preserve its look and feel & other certain unique character .We use advanced equipments ,solvents machines to preserve and restore the look of leather garments and accessories .
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-6" aria-expanded="false">
+									<span class="accordion-title">Q6. What is our Biker Seqment ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>For our biker segment ,we have  specialised machines to cater to the needs of biker gears, jackets ,gloves and shoes .Our advance cleaning solutions are here for you and your dirty riding gear.
+										<br>
+										Get your riding gear cleaned from us with hassle free process. Just walk in or book online with your dirty gear and we’ll take it from there. Helmets ,Jackets ,gloves ,you name it and we will clean and restore.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-7" aria-expanded="false">
+									<span class="accordion-title">Q7. What is dry clean?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Dry cleaning is a cleaning process for clothes and textiles that uses a chemical solvent instead of water. It is called "dry" cleaning because it does not involve the use of water in the cleaning process. Instead, a liquid solvent, such as perchloroethylene or hydrocarbon, is used to remove dirt, stains, and oils from fabrics.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-8" aria-expanded="false">
+									<span class="accordion-title">Q8. What are the benefits of dryclean?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Dry cleaning uses a solvent that is gentle on delicate fabrics, such as silk, wool, and cashmere. It helps to preserve the quality and texture of these materials.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-9" aria-expanded="false">
+									<span class="accordion-title">Q9. What do laundry services do?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>The primary service offered in laundry services is the washing and drying of clothes. We use commercial-grade washing machines with european technology and dryers to clean and dry garments efficiently.  Some laundry services offer pick-up and delivery options, where they collect  clothes from customers' homes and return them after cleaning, providing added convenience and IronOut offers pickup & delivery services.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-10" aria-expanded="false">
+									<span class="accordion-title">Q10. Do we provide online dry cleaning services ?</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Yes, you can place your order online through our website or through our whatsapp number. We provide free home pickup & delivery at all our outlets.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-11" aria-expanded="false">
+									<span class="accordion-title">Q11. Can I walk-in and drop my clothes to our outlets for dry cleaning ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Yes, you can drop your clothes at a nearest fabcare outlet . We will update you once they are ready, and you can pick them up.
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-12" aria-expanded="false">
+									<span class="accordion-title">Q12. Does Fabcare provide leather repair service ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>We provide following leather repair services:<br>
+										•	Leather shoe repair<br>
+										•	Suede shoe repair<br>
+										•	Boots repair<br>
+										•	Leather handbag repair<br>
+										•	Suede handbag repair<br>
+										•	Leather jacket repair<br>
+										•	Suede jacket repair<br>
+										•	Wallet repair<br>
+										•	Belt repair<br>
+										•	Purse repair
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-13" aria-expanded="false">
+									<span class="accordion-title">Q13. Does we remove stains in dry cleaning service?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Our stain removing technology is the best in India. We can remove upto 99% stains, where other dry cleaners are only able to remove upto 80% stains from clothes. Depending on the time frame of a stain, stains of mehendi (heena), ink, oil, food, blood, hair dye, makeup or lipstick – our in house developed stain removal solutions will give the best results.We have a special spotting machine which performs this task to the best.We use eco friendly solutions from France 
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-14" aria-expanded="false">
+									<span class="accordion-title">Q14. Does Fabcare provide steam press (iron) service ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Our stain removing technology is the best in India. We can remove upto 99% stains, where other dry cleaners are only able to remove upto 80% stains from clothes. Depending on the time frame of a stain, stains of mehendi (heena), ink, oil, food, blood, hair dye, makeup or lipstick – our in house developed stain removal solutions will give the best results.We have a special spotting machine which performs this task to the best.We use eco friendly solutions from France 
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-15" aria-expanded="false">
+									<span class="accordion-title">Q15. Do we have any option of express delivery for laundry & dry cleaning services?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Yes, we do provide express service with same day or 1 day delivery at all our outlets.
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-16" aria-expanded="false">
+									<span class="accordion-title">Q16. Does  fabcare provide coat wash or coat dry cleaning service?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>At fabcare, we do not recommend washing coats – either at a dry clean/laundry provider or at home. Coats are usually made of woollen or mixed wool fabric, which can shrink and lose their shine with washing. To give a new life to your precious coats, bring them or book online pick-up – and  them treated with our hydrocarbon technology.
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-17" aria-expanded="false">
+									<span class="accordion-title">Q17. How to avail services from Fabcare ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>At fabcare, we do not recommend washing coats – either at a dry clean/laundry provider or at home. Coats are usually made of woollen or mixed wool fabric, which can shrink and lose their shine with washing. To give a new life to your precious coats, bring them or book online pick-up – and  them treated with our hydrocarbon technology.
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-18" aria-expanded="false">
+									<span class="accordion-title">Q18. Does Fabcare provide curtain and carpet dry cleaning services in Noida ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>We provide dry cleaning service (with upto 99% stain removal) for carpets, rugs, curtains, blinds, drapery, blankets, quilts, cushions, cushion covers, pillow, pillow covers, bedspread, table covers, and table mats. Give your home a new makeover with our upholstery dry cleaning services .Our environmental friendly solutions from France give a new look to all the articles.
+
+									</p>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<button id="accordion-button-19" aria-expanded="false">
+									<span class="accordion-title">Q19. What are the hygiene precautions that Fabcare take ?
+									</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+								<div class="accordion-content">
+									<p>Our processes in Noida are in compliance with all the necessary authorised norms. 
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="shopy_by_room separation">
+	<div class="container">
+		<div class="row justify-content-center align-content-center">
+			<div class="col-md-12" style="max-width: 70%;">
+				<div class="main_text">Quick. Fast. Reliable.</div>
+			</div>
+			<div class="col-md-12 text-center mt-3" style="max-width: 70%;">
+				<div class="text2">
+					We deliver your items cleaned within 24 hours and at the time required.</div>
+				<div style="margin-top: 30px;">
+					<a class="text_btn " href="index.php?route=information/contact">
+						<span class="elementor-button-content-wrapper">
+							<span class="elementor-button-text">Order now</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ column_right }}
+<!-- News -->
+<script>
+
+
+	const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+const itemToggle = this.getAttribute('aria-expanded');
+
+for (i = 0; i < items.length; i ++) {
+items[i].setAttribute('aria-expanded', 'false');
+}
+
+if (itemToggle == 'false') {
+this.setAttribute('aria-expanded', 'true');
+}
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+{{ footer }}

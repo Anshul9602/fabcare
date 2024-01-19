@@ -1,0 +1,192 @@
+<style>
+	.float {
+		position: fixed;
+		width: 70px;
+		height: 70px;
+		bottom: 50px;
+		right: 45px;
+		background-color: #25d366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 40px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 100;
+	}
+	.footer-heading {
+		color: #fff;
+		font-size: 16px;
+	}
+
+	.hb1::after {
+		content: "";
+		position: initial;
+		display: block;
+		width: 40px;
+		height: 2px;
+		margin-top: 5px;
+		background: #f3f3f3;
+		bottom: 0;
+		left: calc(50% - 20px);
+	}
+	.footer-row .col-sm-3 ul {
+		margin-top: 15px;
+	}
+	.footer-row .col-sm-3 ul li a {
+		color: #f1f1f1;
+	}
+	.f1 {
+		font-size: 22px;
+	}
+</style>
+
+<footer style="background:#5c5b60;background-size:cover;background-repete:no-repete;padding:10px 10px;">
+	<div class="container mt-4 mb-2">
+
+		<div class="row footer-row">
+			<div class="col-sm-3 col-12 mt-3 mob_center">
+				<img src="image/pe/white.png" title="{{ name }}" alt="{{ name }}" width="160" style="margin: auto;" class="img-responsive" />
+			</div>
+			<div class="col-sm-3 col-6 mt-3 ">
+				<h5 class="footer-heading">Useful links<span class="hb1"></span>
+				</h5>
+				<ul class="list-unstyled">
+
+					<li>
+						<a href="index.php?route=common/services">Services</a>
+					</li>
+					<li>
+						<a href="index.php?route=common/price">Pricing</a>
+					</li>
+					<li>
+						<a href="{{ contact }}">Get Franchisee</a>
+					</li>
+					
+					<li>
+						<a href="{{ contact }}">{{ text_contact }}</a>
+					</li>
+					<li>
+						<a href="#">Blogs</a>
+					</li>
+				</ul>
+			</div>
+			
+			{% if informations %}
+				<div class="col-sm-3 col-6 mt-3">
+					<h5 class="footer-heading">Need Help?<span class="hb1"></span>
+					</h5>
+					<ul class="list-unstyled">
+						
+                    <li>
+						<a href="index.php?route=common/Policies">Terms</a>
+					</li>
+                    <li>
+						<a href="index.php?route=common/faq">FAQs</a>
+					</li>
+					</ul>
+				</div>
+			{% endif %}
+
+
+			<div class="col-sm-3 col-6 mt-3">
+				<h5 class="footer-heading">Social Media<span class="hb1"></span>
+				</h5>
+				<ul class="list-unstyled">
+					
+
+					<li class="row mt-4">
+						<div class="col-md-1 col-2">
+							<a href="https://www.facebook.com/fabcarelive">
+
+								<i class="fa fa-facebook f1" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="col-md-1 col-2">
+							<a href="https://www.instagram.com/fabcarelive/">
+								<i class="fa fa-instagram f1 "></i>
+							</a>
+						</div>
+						<div class="col-md-1 col-2 pl-4">
+							<a href="https://www.youtube.com/channel/">
+								<i class="fa fa-youtube-play f1" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="col-md-1 col-2 pl-4">
+							<a href="https://www.linkedin.com/in/">
+								<i class="fa fa-linkedin-square f1" aria-hidden="true"></i>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-sm-12">
+			<p class="text-center mt-3 container mobile_font" style=" font-size:16px; color:#f1f1f1; padding:5px;font-weight: 400;">
+				Copyright © 2023, Fabcare . All rights reserved. Developed by
+				<a href="" style="color:#fff;">
+					Juicy Inc</a>
+				.
+			</p>
+
+		</div>
+
+
+	</footer>
+	<a href="https://api.whatsapp.com/send?phone=+91 9873838000&text=Hello" class="float d-flex justify-content-center" style="align-items: center;" target="_blank">
+		<i class="fa fa-whatsapp wp-button"></i>
+	</a>
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+
+
+		// wishlist product
+
+
+// total in wishlist
+const product11 = JSON.parse(localStorage.getItem("wishlist1"));
+
+
+	</script>
+	<!--End of Tawk.to Script-->
+
+	{% for style in styles %}
+		<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>
+	{% endfor %}
+	{% for script in scripts %}
+		<script src="{{ script }}" type="text/javascript"></script>
+	{% endfor %}
+
+
+	<!-- Modernizer JS -->
+	<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+	<!-- Popper JS -->
+	<script src="assets/js/vendor/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/js/vendor/bootstrap.min.js"></script>
+	<!-- slick Slider JS -->
+	<script src="assets/js/plugins/slick.min.js"></script>
+	<!-- Countdown JS -->
+	<script src="assets/js/plugins/countdown.min.js"></script>
+	<!-- Nice Select JS -->
+	<script src="assets/js/plugins/nice-select.min.js"></script>
+	<!-- jquery UI JS -->
+	<script src="assets/js/plugins/jqueryui.min.js"></script>
+	<!-- Image zoom JS -->
+	<script src="assets/js/plugins/image-zoom.min.js"></script>
+	<!-- Imagesloaded JS -->
+	<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+	<!-- Instagram feed JS -->
+	<script src="assets/js/plugins/instagramfeed.min.js"></script>
+	<!-- mailchimp active js -->
+	<script src="assets/js/plugins/ajaxchimp.js"></script>
+	<!-- contact form dynamic js -->
+	<script src="assets/js/plugins/ajax-mail.js"></script>
+	<!-- google map api -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+	<!-- google map active js -->
+	<script src="assets/js/plugins/google-map.js"></script>
+	<!-- Main JS -->
+	<script src="assets/js/main.js?v1.1"></script>
+
+</body></html>

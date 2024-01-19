@@ -1,0 +1,64 @@
+{{ header }}
+<style>
+	.new-font {
+		font-size: 15px;
+		line-height: 2;
+	}
+</style>
+
+<!-- breadcrumb area start -->
+<div class="breadcrumb-area hidden-phone">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumb-wrap">
+					<nav aria-label="breadcrumb">
+						<ul class="breadcrumb">
+							{% for breadcrumb in breadcrumbs %}
+							<li class="ml-2">
+								<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+							</li>
+							&nbsp;/
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+<!-- breadcrumb area end -->
+<div class="container">
+	<!-- contact area start -->
+	<div class="contact-area section-padding pt-20">
+		<div class="container">
+			<h1 class="contact-title " style="color:#4a4975; font-family: 'newfont', sans-serif;">
+				About Us<span class="hb"></span>
+			</h1><br>
+			<div class="row">
+				<div class="col-md-6 mt-3">
+
+					<h6 class="contact-title new-font "
+						style=" line-height: 1.5;font-weight: 600;color: black; font-family: 'newfont', sans-serif">
+
+					</h6>
+					<p class="new-font ">Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa animi nostrum eveniet aspernatur incidunt dolorum ratione expedita, ut qui labore nemo aliquid ipsum harum eius quis saepe pariatur libero veritatis! Enim, aspernatur illum?
+					</p>
+
+				</div>
+				<div class="col-md-6 mt-3">
+					<img src="image/1.jpg">
+				</div>
+			</div>
+			<h2 class="contact-title mt-5 text-center" style="color:black; font-family: 'newfont', sans-serif;">
+				Vision<span class="hb" style="display: flex;justify-content: center;"></span>
+			</h2>
+			<p class="new-font mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa animi nostrum eveniet aspernatur incidunt dolorum ratione expedita, ut qui labore nemo aliquid ipsum harum eius quis saepe pariatur libero veritatis! Enim, aspernatur illum?
+			</p>
+
+		</div>
+	</div>
+	<!-- contact area end -->
+	<br /><br />
+</div>{{ footer }}

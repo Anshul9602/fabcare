@@ -1,0 +1,75 @@
+.des-tab li {
+    list-style: none;
+    min-width: 120px;
+    text-align: center;
+    margin: 0px 20px;
+
+}
+
+.des-tab li a {
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+
+}
+
+
+
+.slick-dots li button::before {
+    content: none;
+}
+
+.des-tab li a:hover {
+    color: #333;
+}
+
+.des-tab li a.active {
+    border-bottom: 2px solid #f28d52;
+}
+
+.des-con .tab-pane ul {
+    padding: 10px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.des-con .tab-pane ul li {
+    padding: 5px 0px;
+}
+
+.w-100 {
+    width: 1005;
+}
+
+.slider-nav .slick-list.draggable {
+    max-height: 625px;
+    overflow: hidden;
+}
+
+.slick-list.draggable {
+    height: 100% !important;
+}
+
+
+
+.slider.slider-for,
+.slider.slider-nav {
+    width: 100%;
+    float: left;
+}
+
+.plocationbox {
+    display: none !important;
+}
+
+.rating {
+    margin-top: 5px;
+}
+
+.mlr-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}

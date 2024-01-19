@@ -3,9 +3,7 @@
 		display: flex !important;
 	}
 
-	.jcenter1 {
-		justify-content: center !important;
-	}
+
 
 	.blink {
 		animation: blinker 0.7s linear infinite;
@@ -22,11 +20,25 @@
 		}
 	}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+<script>
+$(document).ready(function() {
+    // Add click event to all navigation links
+    $('.desktop-menu a').click(function() {
+        // Remove "active" class from all navigation links
+        $('.desktop-menu a').removeClass('active');
+
+        // Add "active" class to the clicked navigation link
+        $(this).addClass('active');
+    });
+});
+</script>
 {% if categories %}
 <div class="">
 	<nav class="desktop-menu">
 		<div class="row p-3">
+			
 			<ul class="nav col-md-12 jcenter" style="align-items: center; justify-content: space-between;">
 
 				{% for category in categories %}
@@ -67,16 +79,4 @@
 	</nav>
 </div>
 {% endif %}</li>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-	$(document).ready(function () { // Add click event to all navigation links
-		$('.desktop-menu a').click(function () { 
-			
-			
-			// Remove "active" class from all navigation links
-			$('.desktop-menu a').removeClass('active');
 
-			// Add "active" class to the clicked navigation link
-			$(this).addClass('active');
-		});
-	});</script>

@@ -61,6 +61,9 @@ elseif("Pricing" == $category['name']){
 elseif("Get Franchise" == $category['name']){
 	$href = $this->url->link('information/get_franchise');
 }
+elseif("Blogs" == $category['name']){
+	$href ="#";
+}
 else{
 	$href = $this->url->link('product/category', 'path=' . $category['category_id'] );
 }

@@ -1,0 +1,56 @@
+{{ header }}
+<!-- breadcrumb area start -->
+
+<!-- breadcrumb area end -->
+	<div
+	class="container"> <!-- contact area start -->
+	<div class="contact-area section-padding pt-4">
+		<div class="container" style="height: 100vh;align-items: center;display: flex;">
+			<div class="row" style="justify-content: space-around;">
+				<div class="col-md-6">
+					<div class="contact-message text-center">
+						<h4 class="contact-title new-font" style="color: black; font-family: 'newfont', sans-serif">
+							Tell Us Your Requirement
+						</h4>
+						<br>
+						<form action="index.php?route=information/thankyou" method="post" class="contact-form">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input name="first_name" placeholder="Name *" type="text" required/>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input name="phone" placeholder="Phone *" type="tel" required/>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input name="email_address" placeholder="Email " type="email"/>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input name="city" placeholder="City " type="text"/>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input name="pin-code" placeholder="Pincode " type="text"/>
+								</div>
+								
+								<div class="col-12">
+									
+									<div class="contact-btn">
+										<button class="btn btn-sqr" type="submit" style="background-color:#5d5443;border-radius: 100px;">
+											<a style="color: white">Send Message</a>
+										</button>
+									</div>
+								</div>
+								<div class="col-12 d-flex justify-content-center">
+									<p class="form-messege"></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- contact area end -->
+	<br/><br/>
+</div>
+{{ footer }}

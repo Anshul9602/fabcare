@@ -1,5 +1,42 @@
-{{ header }}
-<link href="https://fonts.cdnfonts.com/css/outfit" rel="stylesheet">
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* default/template/common/price.twig */
+class __TwigTemplate_14dc332dc91f123a6114ecbbdc35f1f106334d49a6234a637e4f9577a6630909 extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo ($context["header"] ?? null);
+        echo "
+<link href=\"https://fonts.cdnfonts.com/css/outfit\" rel=\"stylesheet\">
 <style>
   .card1 {
     width: 100%;
@@ -346,24 +383,24 @@
 
 </style>
 
-<section class="shopy_by_room separation">
-  <div class="container">
+<section class=\"shopy_by_room separation\">
+  <div class=\"container\">
 
-    <div class="row">
-      <div class="col-md-8">
-        <div class="main_text">
+    <div class=\"row\">
+      <div class=\"col-md-8\">
+        <div class=\"main_text\">
           Expert Fabric Care
-          <span style="color: #5d5443;">Services</span>
+          <span style=\"color: #5d5443;\">Services</span>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="text2">
+      <div class=\"col-md-4\">
+        <div class=\"text2\">
           Free your time for what really matters.
         </div>
-        <div class="mob_center" style="margin-top: 30px;">
-          <a class="text_btn " href="index.php?route=information/contact">
-            <span class="elementor-button-content-wrapper">
-              <span class="elementor-button-text" style="    text-transform: uppercase;">Schedule free pick up</span>
+        <div class=\"mob_center\" style=\"margin-top: 30px;\">
+          <a class=\"text_btn \" href=\"index.php?route=information/contact\">
+            <span class=\"elementor-button-content-wrapper\">
+              <span class=\"elementor-button-text\" style=\"    text-transform: uppercase;\">Schedule free pick up</span>
             </span>
           </a>
         </div>
@@ -373,39 +410,39 @@
 
   </div>
 </section>
-<section class="shopy_by_room separation d-none">
-  <img src="image/pe/b1.png" style="width:100%;">
+<section class=\"shopy_by_room separation d-none\">
+  <img src=\"image/pe/b1.png\" style=\"width:100%;\">
 </section>
-<section class="shopy_by_room separation ">
-  <div class="main1 row" style="justify-content: center; display: flex;">
+<section class=\"shopy_by_room separation \">
+  <div class=\"main1 row\" style=\"justify-content: center; display: flex;\">
 
-    <div class="col-md-12 text-center pb-3 h3">Our locations</div>
-    <select class="col-md-3"onchange="showContent()">
-      <option value="" selected disabled>Select an option</option>
-      <option value="Gaur">Gaur City</option>
-      <option value="Indirapuram">Indirapuram</option>
-      <option value="Street76">Street76</option>
+    <div class=\"col-md-12 text-center pb-3 h3\">Our locations</div>
+    <select class=\"col-md-3\"onchange=\"showContent()\">
+      <option value=\"\" selected disabled>Select an option</option>
+      <option value=\"Gaur\">Gaur City</option>
+      <option value=\"Indirapuram\">Indirapuram</option>
+      <option value=\"Street76\">Street76</option>
     </select>
   </div>
 </section>
 
 
 <!-- hero slider area start -->
-<div id="gaur">
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">DRY CLEAN PRICE LIST</h3>
+<div id=\"gaur\">
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">DRY CLEAN PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="justify-content: space-around;">
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+      <div class=\"row mt-3\" style=\"justify-content: space-around;\">
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Men’s Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -475,15 +512,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Women@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Women@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Women Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -563,15 +600,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-household@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-household@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Home</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -647,15 +684,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Shoes@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Shoes@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Shoes</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -710,16 +747,16 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png"
-                class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png\"
+                class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Accessories</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -764,21 +801,21 @@
       </div>
     </div>
   </section>
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">LAUNDRY PRICE LIST</h3>
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">LAUNDRY PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="    justify-content: center;">
+      <div class=\"row mt-3\" style=\"    justify-content: center;\">
 
-        <div class="col-md-6">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-6\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -814,21 +851,21 @@
     </div>
   </section>
 </div>
-<div id="indira">
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">DRY CLEAN PRICE LIST</h3>
+<div id=\"indira\">
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">DRY CLEAN PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="justify-content: space-around;">
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+      <div class=\"row mt-3\" style=\"justify-content: space-around;\">
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Men’s Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -898,15 +935,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Women@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Women@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Women Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -986,15 +1023,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-household@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-household@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Home</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1070,15 +1107,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Shoes@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Shoes@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Shoes</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1133,16 +1170,16 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png"
-                class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png\"
+                class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Accessories</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1187,21 +1224,21 @@
       </div>
     </div>
   </section>
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">LAUNDRY PRICE LIST</h3>
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">LAUNDRY PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="    justify-content: center;">
+      <div class=\"row mt-3\" style=\"    justify-content: center;\">
 
-        <div class="col-md-6">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-6\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1237,21 +1274,21 @@
     </div>
   </section>
 </div>
-<div id="street">
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">DRY CLEAN PRICE LIST</h3>
+<div id=\"street\">
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">DRY CLEAN PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="justify-content: space-around;">
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+      <div class=\"row mt-3\" style=\"justify-content: space-around;\">
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Men’s Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1321,15 +1358,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Women@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Women@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Women Wear</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1405,15 +1442,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-household@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-household@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Home</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1489,15 +1526,15 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Shoes@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Shoes@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Shoes</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1552,16 +1589,16 @@
             </table>
           </div>
         </div>
-        <div class="col-md-5">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png"
-                class="lazyloaded" /></noscript>
+        <div class=\"col-md-5\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"https://tumbledry.in/wp-content/uploads/2023/02/Price-for-Laundry-@3x.png\"
+                class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Accessories</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1606,21 +1643,21 @@
       </div>
     </div>
   </section>
-  <section class="shopy_by_room separation">
-    <div class="container">
-      <h3 class="text-center m-3 ">LAUNDRY PRICE LIST</h3>
+  <section class=\"shopy_by_room separation\">
+    <div class=\"container\">
+      <h3 class=\"text-center m-3 \">LAUNDRY PRICE LIST</h3>
       <hr>
-      <div class="row mt-3" style="    justify-content: center;">
+      <div class=\"row mt-3\" style=\"    justify-content: center;\">
 
-        <div class="col-md-6">
-          <div class="jet-table-wrapper table-responsive mb-4">
-            <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+        <div class=\"col-md-6\">
+          <div class=\"jet-table-wrapper table-responsive mb-4\">
+            <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
             </div>
             <table>
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Start Price</th>
+                  <th>Reg Price</th>
 
                 </tr>
               </thead>
@@ -1656,21 +1693,21 @@
     </div>
   </section>
 </div>
-<section class="shopy_by_room separation d-none">
-  <div class="container">
-    <h3 class="text-center m-3 ">STEAM IRON PRICE LIST</h3>
+<section class=\"shopy_by_room separation d-none\">
+  <div class=\"container\">
+    <h3 class=\"text-center m-3 \">STEAM IRON PRICE LIST</h3>
     <hr>
-    <div class="row mt-3">
+    <div class=\"row mt-3\">
 
-      <div class="col-md-6">
-        <div class="jet-table-wrapper table-responsive mb-4">
-          <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+      <div class=\"col-md-6\">
+        <div class=\"jet-table-wrapper table-responsive mb-4\">
+          <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
           </div>
           <table>
             <thead>
               <tr>
                 <th>Shoes</th>
-                <th>Start Price</th>
+                <th>Reg Price</th>
                 <th>Premium Brands Price</th>
               </tr>
             </thead>
@@ -1719,15 +1756,15 @@
           </table>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="jet-table-wrapper table-responsive mb-4">
-          <div><img src="image/pe/service/Price-for-Men@3x.png" class="lazyloaded" /></noscript>
+      <div class=\"col-md-6\">
+        <div class=\"jet-table-wrapper table-responsive mb-4\">
+          <div><img src=\"image/pe/service/Price-for-Men@3x.png\" class=\"lazyloaded\" /></noscript>
           </div>
           <table>
             <thead>
               <tr>
                 <th>Bag/Suit Case</th>
-                <th>Start Price</th>
+                <th>Reg Price</th>
                 <th>Premium Brands Price</th>
               </tr>
             </thead>
@@ -1792,36 +1829,36 @@
     </div>
   </div>
 </section>
-<section class="shopy_by_room separation" style="background-color: #92918c;margin-top:50px;">
-  <div class="container">
-    <div class="row mod" style="justify-content: space-between;">
-      <div class="col-md-4 row mobb" style="border-right: 1px solid;align-items: center;">
-        <div class="col-md-2 col-3 ">
-          <img src="image/pe/1.png" alt="" width="64">
+<section class=\"shopy_by_room separation\" style=\"background-color: #92918c;margin-top:50px;\">
+  <div class=\"container\">
+    <div class=\"row mod\" style=\"justify-content: space-between;\">
+      <div class=\"col-md-4 row mobb\" style=\"border-right: 1px solid;align-items: center;\">
+        <div class=\"col-md-2 col-3 \">
+          <img src=\"image/pe/1.png\" alt=\"\" width=\"64\">
         </div>
-        <div class="col-md-9 col-9">
-          <div class="h_m">Modern European technology</div>
+        <div class=\"col-md-9 col-9\">
+          <div class=\"h_m\">Modern European technology</div>
 
         </div>
       </div>
 
-      <div class="col-md-4 row mobb" style="border-right: 1px solid;align-items: center;">
-        <div class="col-md-2 col-3">
-          <img src="image/pe/2.png" alt="" width="64">
+      <div class=\"col-md-4 row mobb\" style=\"border-right: 1px solid;align-items: center;\">
+        <div class=\"col-md-2 col-3\">
+          <img src=\"image/pe/2.png\" alt=\"\" width=\"64\">
         </div>
-        <div class="col-md-9 col-9">
-          <div class="h_m">Fabcare: A Leading Laundry and Drycleaning Solution Provider Globally</div>
+        <div class=\"col-md-9 col-9\">
+          <div class=\"h_m\">Fabcare: A Leading Laundry and Drycleaning Solution Provider Globally</div>
 
         </div>
       </div>
 
 
-      <div class="col-md-4 row mob11" style="align-items: center;">
-        <div class="col-md-2 col-3">
-          <img src="image/pe/3.png" alt="" width="64">
+      <div class=\"col-md-4 row mob11\" style=\"align-items: center;\">
+        <div class=\"col-md-2 col-3\">
+          <img src=\"image/pe/3.png\" alt=\"\" width=\"64\">
         </div>
-        <div class="col-md-9 col-9">
-          <div class="h_m">Eco friendly solutions from France </div>
+        <div class=\"col-md-9 col-9\">
+          <div class=\"h_m\">Eco friendly solutions from France </div>
 
         </div>
       </div>
@@ -1833,22 +1870,22 @@
 
 </div>
 </section>
-<section class="shopy_by_room separation" style="margin-bottom: 20px;">
-  <div class="container">
+<section class=\"shopy_by_room separation\" style=\"margin-bottom: 20px;\">
+  <div class=\"container\">
 
-    <div class="row justify-content-center align-content-center">
-      <div class="col-md-12" style="max-width: 70%;">
-        <div class="main_text">Quick. Efficient. Reliable.
+    <div class=\"row justify-content-center align-content-center\">
+      <div class=\"col-md-12\" style=\"max-width: 70%;\">
+        <div class=\"main_text\">Quick. Efficient. Reliable.
 
         </div>
       </div>
-      <div class="col-md-12 text-center mt-3" style="max-width: 70%;">
-        <div class="text2">
+      <div class=\"col-md-12 text-center mt-3\" style=\"max-width: 70%;\">
+        <div class=\"text2\">
           We deliver your items cleaned within 24 hours and at the time required.</div>
-        <div style="margin-top: 30px;">
-          <a class="text_btn " href="index.php?route=information/contact">
-            <span class="elementor-button-content-wrapper">
-              <span class="elementor-button-text">Order now</span>
+        <div style=\"margin-top: 30px;\">
+          <a class=\"text_btn \" href=\"index.php?route=information/contact\">
+            <span class=\"elementor-button-content-wrapper\">
+              <span class=\"elementor-button-text\">Order now</span>
             </span>
           </a>
         </div>
@@ -1859,37 +1896,40 @@
   </div>
 </section>
 
-{{ column_right }}
+";
+        // line 1862
+        echo ($context["column_right"] ?? null);
+        echo "
 <!-- News -->
 
 <script>
   function showContent() {
-    var selectedCity = document.querySelector("select").value;
+    var selectedCity = document.querySelector(\"select\").value;
 
     // Hide all content divs
-    document.getElementById("gaur").style.display = "none";
-    document.getElementById("indira").style.display = "none";
-    document.getElementById("street").style.display = "none";
+    document.getElementById(\"gaur\").style.display = \"none\";
+    document.getElementById(\"indira\").style.display = \"none\";
+    document.getElementById(\"street\").style.display = \"none\";
 
     // Show the selected content div
-    if (selectedCity === "Gaur") {
-      document.getElementById("gaur").style.display = "block";
-    } else if (selectedCity === "Indirapuram") {
-      document.getElementById("indira").style.display = "block";
-    } else if (selectedCity === "Street76") {
-      document.getElementById("street").style.display = "block";
+    if (selectedCity === \"Gaur\") {
+      document.getElementById(\"gaur\").style.display = \"block\";
+    } else if (selectedCity === \"Indirapuram\") {
+      document.getElementById(\"indira\").style.display = \"block\";
+    } else if (selectedCity === \"Street76\") {
+      document.getElementById(\"street\").style.display = \"block\";
     }
   }
 </script>
 <script>
-  var swiper = new Swiper(".topSwiper1", {
+  var swiper = new Swiper(\".topSwiper1\", {
     pagination: {
-      el: ".top-swiper-pagination",
+      el: \".top-swiper-pagination\",
       clickable: true
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: \".swiper-button-next\",
+      prevEl: \".swiper-button-prev\"
     },
     autoplay: false,
     // Default parameters
@@ -1914,14 +1954,14 @@
     }
   });
 
-  var swiper = new Swiper(".topSwiper", {
+  var swiper = new Swiper(\".topSwiper\", {
     pagination: {
-      el: ".top-swiper-pagination",
+      el: \".top-swiper-pagination\",
       clickable: true
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: \".swiper-button-next\",
+      prevEl: \".swiper-button-prev\"
     },
     autoplay: 5000,
     // Default parameters
@@ -1946,4 +1986,28 @@
     }
   });
 </script>
-{{ footer }}
+";
+        // line 1949
+        echo ($context["footer"] ?? null);
+    }
+
+    public function getTemplateName()
+    {
+        return "default/template/common/price.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  1991 => 1949,  1901 => 1862,  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "default/template/common/price.twig", "");
+    }
+}

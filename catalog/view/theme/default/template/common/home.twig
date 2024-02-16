@@ -49,29 +49,30 @@
 
 <!-- Overlay background -->
 <div id="overlay"></div>
+<div>
+  <div class="swiper top1">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <img src="image/pe/home/Banners/mb1.jpg" alt="" width="100%">
+      </div>
+      <div class="swiper-slide">
+        <img src="image/pe/home/Banners/mb2.jpg" alt="" width="100%">
+      </div>
+      <div class="swiper-slide">
+        <img src="image/pe/home/Banners/mb3.jpg" alt="" width="100%">
+      </div>
+      
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
 <div style="background-image: url('image/11.png');background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;">
-  <div>
-    <div class="swiper top1">
-      <div class="swiper-wrapper">
-        {% for banner in banners %}
-        <div class="swiper-slide">
-
-          <a href="{{ banner.link }}">
-
-            <img src="{{ banner.image }}" alt="" class="img-response slider-img"></a>
-        </div>
-        {% endfor %}
-
-
-
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </div>
-  <section class="shopy_by_room ">
+    
+  <section class="shopy_by_room pt-md-5 pt-3">
     <div class="container">
 
       <div class="row justify-content-center align-content-center">
@@ -868,9 +869,9 @@
     autoplay: false,
     // Default parameters
     slidesPerView: 1,
-
+    
     // Responsive breakpoints
-
+    
   });
   var swiper = new Swiper(".topSwiper1", {
     pagination: {
